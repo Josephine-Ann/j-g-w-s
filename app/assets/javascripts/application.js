@@ -11,6 +11,10 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require activestorage
-//= require turbolinks
 //= require_tree .
+
+// function greetUser(name) {
+//   alert('hello' + name);
+// }
+
+// greetUser('Oslo!!!');
