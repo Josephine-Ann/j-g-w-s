@@ -1,8 +1,9 @@
-import { checkboxesChecked, myFunctionStart, flipCardFlips } from '../components/define_everything';
+import { checkboxesChecked, myFunctionStart, flipCardFlips, checkboxesCheckedDisabledAfterClicking } from '../components/define_everything';
 
 flipCardFlips();
 checkboxesChecked();
 myFunctionStart();
+checkboxesCheckedDisabledAfterClicking();
 
 // /* eslint no-console:0 */
 // // This file is automatically compiled by Webpack, along with any other files

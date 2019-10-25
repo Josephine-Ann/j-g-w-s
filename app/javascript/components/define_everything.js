@@ -14,7 +14,24 @@ let randomCardOne = randomCard[0];
 let randomCardOneBack = randomCardBack[0];
 
 const range = [...Array(17).keys()];
-
+const rangeCheckboxesFirst = [...Array(10).keys()];
+rangeCheckboxesFirst.splice(0, 1)
+const rangeCheckboxesSecond = [...Array(10).keys()];
+rangeCheckboxesSecond.splice(1, 1)
+const rangeCheckboxesThird = [...Array(10).keys()];
+rangeCheckboxesThird.splice(2, 1)
+const rangeCheckboxesFourth = [...Array(10).keys()];
+rangeCheckboxesFourth.splice(3, 1)
+const rangeCheckboxesFifth = [...Array(10).keys()];
+rangeCheckboxesFifth.splice(4, 1)
+const rangeCheckboxesSixth = [...Array(10).keys()];
+rangeCheckboxesSixth.splice(5, 1)
+const rangeCheckboxesSeventh = [...Array(10).keys()];
+rangeCheckboxesSeventh.splice(6, 1)
+const rangeCheckboxesEighth = [...Array(10).keys()];
+rangeCheckboxesEighth.splice(7, 1)
+const rangeCheckboxesNinth = [...Array(10).keys()];
+rangeCheckboxesNinth.splice(8, 1)
 
 randomCard.splice(2, 0, randomCardOne);
 randomCard.splice(4, 0, randomCardOne);
@@ -61,11 +78,11 @@ randomCardBack.splice(16, 0, randomCardOneBack);
   let sequenceCardFourteenBack = randomCardBack[13];
   let sequenceCardSixteenBack = randomCardBack[15];
 
-
 let accumulator = 1;
 
+
 function checkboxesChecked() {
-    checkboxes.forEach(checkbox => {
+  checkboxes.forEach(checkbox => {
   checkbox.addEventListener( 'click', function() {
   const randomCardZero = randomCard[0];
   const randomCardZeroBack = randomCardBack[0];
@@ -128,8 +145,16 @@ function checkboxesChecked() {
   sequenceCardTwelveBack = randomCardBack[11];
   sequenceCardFourteenBack = randomCardBack[13];
   sequenceCardSixteenBack = randomCardBack[15];
-})});
-}
+})})};
+
+
+
+function checkboxesCheckedDisabledAfterClicking() {
+  checkboxes.forEach(checkbox => {
+  checkbox.addEventListener( 'click', function() {
+      checkbox.disabled = true;
+  })})};
+
 
 const myFunctionStart = () => {
   startButton.addEventListener("click", (event) => {
@@ -180,5 +205,5 @@ card.forEach(card => card.addEventListener( 'click', function() {
 }))
 };
 
-export { checkboxesChecked, myFunctionStart, flipCardFlips };
+export { checkboxesChecked, myFunctionStart, flipCardFlips, checkboxesCheckedDisabledAfterClicking };
 
